@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    container_name: securitydev-db
+    environment:
+      MYSQL_ROOT_PASSWORD: securityroot
+      MYSQL_DATABASE: securitydev-db
+      MYSQL_USER: securitydev
+      MYSQL_PASSWORD: security
+    ports:
+      - '3306:3306'
